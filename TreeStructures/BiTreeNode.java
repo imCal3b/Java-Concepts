@@ -1,3 +1,5 @@
+package TreeStructures;
+
 public class BiTreeNode<K extends Comparable<K>,V> {
     /*
      * BiTreeNode class defines the basic element of a linked tree data structure.
@@ -29,6 +31,10 @@ public class BiTreeNode<K extends Comparable<K>,V> {
 
         leftChild = null;
         rightChild = null;
+     }
+
+     public K getKey() {
+        return key;
      }
 
      public String toString() {
