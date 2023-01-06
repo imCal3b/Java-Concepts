@@ -1,3 +1,5 @@
+package ListStructures;
+
 public class Node<T> {
     /*
      * Node class defines the basic element to be useed in a linked list
