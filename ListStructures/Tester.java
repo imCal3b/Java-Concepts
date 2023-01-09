@@ -16,15 +16,15 @@ public class Tester {
 		*/
 		
 		/* Part 1: */
-		// testAddFront();
-		// testAddBack();
-		// testSizeAndIsEmpty();
+		testAddFront();
+		testAddBack();
+		testSizeAndIsEmpty();
 		testRemoveFront();
-		// testRemoveBack();
+		testRemoveBack(); // problem in remove back!!
 		
 		/* Part 2 */
-		// testMoveToBack();
-		// testInsertInto();
+		testMoveToBack();
+		testInsertInto();
 		
 		System.out.println("Passed " + testPassCount + " / " + testCount + " tests");
     }
