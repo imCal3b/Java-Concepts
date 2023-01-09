@@ -2,6 +2,8 @@ package TreeStructures;
 import java.util.List;
 import java.util.LinkedList;
 
+// Shouldnt need both a findRec() and insertRec()
+// can be refactored to simplify code
 
 public class BinarySearchTree<K extends Comparable<K>,V> {
     /*
