@@ -45,8 +45,8 @@ public class LinkedNodeList<T extends Comparable<T>> implements ListInterface<T>
         }
     }
 
-    public T removeFront() throws ListEmptyException {
-        if (isEmpty()) throw new ListEmptyException();
+    public T removeFront() {
+        if (isEmpty()) return null;
 
         if (numElements == 1) {
             T returnData = head.getData();
@@ -67,8 +67,8 @@ public class LinkedNodeList<T extends Comparable<T>> implements ListInterface<T>
         }
     }
 
-    public T removeBack() throws ListEmptyException {
-        if (isEmpty()) throw new ListEmptyException();
+    public T removeBack() {
+        if (isEmpty()) return null;
 
         if (numElements == 1) {
             T returnData = tail.getData();
@@ -89,9 +89,9 @@ public class LinkedNodeList<T extends Comparable<T>> implements ListInterface<T>
         }
     }
 
-    public void moveToBack(int pos) throws ListEmptyException, PosOutOfBoundsException {
-        if (pos < 0 || pos > numElements) throw new PosOutOfBoundsException();
-        if (isEmpty()) throw new ListEmptyException();
+    public void moveToBack(int pos) {
+        if (pos < 0 || pos > numElements) return;
+        if (isEmpty()) return;
 
         if (pos+1 == numElements) {
             // nothing happens as were at the last element
@@ -167,6 +167,31 @@ public class LinkedNodeList<T extends Comparable<T>> implements ListInterface<T>
         tail = null;
         numElements = 0;
     }
+
+    // __________________________________
+    // Methods for provided tester
+    public String frontToBack() {
+		String result = "{";
+		Node<T> cur = head;
+		while (cur != null) {
+			result += cur.getData();
+			cur = cur.next;
+		}
+		result += "}";
+		return result;
+	}
+	
+	public String backToFront() {
+		String result = "{";
+		Node<T> cur = tail;
+		while (cur != null) {
+			result += cur.getData();
+			cur = cur.prev;
+		}
+		result += "}";
+		return result;
+	}
+    // __________________________________
 
     public String toString() {
         String result = "{";

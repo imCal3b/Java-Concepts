@@ -24,7 +24,7 @@ public interface ListInterface<T extends Comparable<T>> {
      * Input:           NA
      * Returns:         T - returns the element being removed
      */
-    T removeFront() throws ListEmptyException;
+    T removeFront(); //throws ListEmptyException
 
     /*
      * Purpose:         to remove the element at the back of the list
@@ -32,7 +32,7 @@ public interface ListInterface<T extends Comparable<T>> {
      * Input:           NA
      * Returns:         T - returns the element being removed
      */
-    T removeBack() throws ListEmptyException;
+    T removeBack(); //throws ListEmptyException
 
     /*
      * Purpose:         takes the element at the specified position/index
@@ -44,7 +44,7 @@ public interface ListInterface<T extends Comparable<T>> {
      * Input:           int - the position of the element to be moved
      * Returns:         NA
      */
-    void moveToBack(int index) throws ListEmptyException, PosOutOfBoundsException;
+    void moveToBack(int index); //throws ListEmptyException, PosOutOfBoundsException
 
     /*
      * Purpose:         insert a new element into a specific part of the list based
