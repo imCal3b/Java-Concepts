@@ -23,4 +23,8 @@ public class Entry<K extends Comparable<K>, V> {
 		return key;
 	}
 
+	public String toString() {
+		return "("+key+"|"+value+")";
+	}
+
 }
