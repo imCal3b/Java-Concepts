@@ -19,8 +19,8 @@ public class Entry<K extends Comparable<K>,V> {
     }
 
     public boolean equals(Object other) {
-        if (other instanceof Entry) {
-            Entry otherEntry = (Entry) other;
+        if (other instanceof Entry) {           // Entry class was written this way by instructor.
+            Entry otherEntry = (Entry) other;   // can statement be written in another way to eliminate caution?
 
             return ((this.key == otherEntry.key ||
                 (this.key != null && otherEntry.key != null && this.key.equals(otherEntry.key))) && 
