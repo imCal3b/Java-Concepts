@@ -1,6 +1,6 @@
 package ListStructures;
 
-public class Node<T> {
+public class Node<T extends Comparable<T>> {
     /*
      * Node class defines the basic element to be useed in a linked list
      * style of data structure.
@@ -40,5 +40,9 @@ public class Node<T> {
 
     public Node<T> getPrev() {
         return prev;
+    }
+
+    public int compareTo(Node<T> other) {
+        return this.data.compareTo(other.getData());
     }
 }
