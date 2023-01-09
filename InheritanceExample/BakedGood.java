@@ -11,5 +11,9 @@ public class BakedGood extends Dessert {
         super(name);
         this.type = type;
     }
+
+    public String toString() {
+        return "Yummy - " + type + this.getName();
+    }
     
 }
