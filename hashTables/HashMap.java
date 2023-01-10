@@ -1,8 +1,9 @@
 package hashTables;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Iterator;
+import java.util.*;
+// import java.util.List;
+// import java.util.ArrayList;
+// import java.util.LinkedList;
+// import java.util.Iterator;
 
 public class HashMap<K extends Comparable<K>, V> implements MapInterface<K,V> {
 
