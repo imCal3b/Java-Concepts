@@ -69,7 +69,7 @@ public class Heap {
 			data[parentIndex] = data[index];
 			data[index] = temp;
 
-			bubbleUp((index-1)/2);
+			bubbleUp(parentIndex);
 		} else {
 			return;
 		}
