@@ -23,7 +23,7 @@ public class ArrayList implements ListInterface {
         numElements = 0;
     }
 
-    public void addFront(Integer data) {
+    public void addFront(Integer data) { //wants comparable data type
         if (numElements == 0) {
             list[0] = data;
             numElements++;
@@ -50,7 +50,7 @@ public class ArrayList implements ListInterface {
         return list;
     }
 
-    public void addBack(Integer data) {
+    public void addBack(Integer data) { // wants comparable data type
         if (numElements == list.length) list = scale(list);
 
         list[numElements] = data;
@@ -69,7 +69,7 @@ public class ArrayList implements ListInterface {
 
     public Integer removeBack() {
         if (numElements == 0) return null;
-        
+
         numElements--;
         return list[numElements];
     }
